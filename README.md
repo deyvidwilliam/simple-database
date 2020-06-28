@@ -7,11 +7,11 @@ Transactions are isolated at the <em>Read Committed</em> level and the data is n
 ```
 >>> from simple import SimpleDatabase
 >>> myDb = SimpleDatabase()
->>> myDb.put("example", "foo") #Sets Value
+>>> myDb.put("example", "foo") # Sets value
 >>> myDb.get("example")
 'foo'
 
 >>> myDb.createTransaction("transaction1")
->>> myDb.put("a", "bar", "transaction1") #Sets Value withing transaction
+>>> myDb.put("a", "bar", "transaction1") # Sets value within transaction
 >>> myDb.commit_transaction("transaction1")
 ```

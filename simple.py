@@ -101,7 +101,6 @@ class SimpleDatabase:
                 raise Exception("Error removing value from database from inside a transaction")
 
     def create_transaction(self, transaction_id):
-
         if transaction_id not in self.tran_open:
             try:
                 self.tran_open.append(transaction_id)
